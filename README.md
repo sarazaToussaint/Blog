@@ -1,24 +1,49 @@
-# BLOG RAILS
+# Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+Open your terminal, move to the directory where you want to clone the app (i.e cd Documents)
+Enter git clone ``
+Change to the directory you just clone into (i.e cd blog)
+Include any possible changes and run "git add ."
+Commit the changes with a descriptive message (i.e xyz features added)
+Push the changes to changes to the repository (i.e git push)
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+- Ruby
+- Rails
+- npm
 
-* Configuration
+## Setup
 
-* Database creation
+- System dependencies
+- linters for Ruby on Rails
+- PostgreSQL DataBase
 
-* Database initialization
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+- GitHub: [@githubhandle](https://github.com/sarazaToussaint)
+- Twitter: [@twitterhandle](https://twitter.com/ToussaintSaraz1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/toussaintsaraza/)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
