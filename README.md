@@ -3,7 +3,7 @@
 ## Getting Started
 
 Open your terminal, move to the directory where you want to clone the app (i.e cd Documents)
-Enter git clone ``
+Enter git clone `https://github.com/sarazaToussaint/Blog.git`
 Change to the directory you just clone into (i.e cd blog)
 Include any possible changes and run "git add ."
 Commit the changes with a descriptive message (i.e xyz features added)
