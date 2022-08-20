@@ -1,4 +1,7 @@
-# Blog
+# Blog App
+
+The Blog app is a classic example of a blog website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
+Built with: Ruby on Rails
 
 ## Getting Started
 
@@ -21,6 +24,9 @@ Push the changes to changes to the repository (i.e git push)
 - linters for Ruby on Rails
 - PostgreSQL DataBase
 
+## Run tests
+
+To test this app run `rspec`
 
 ## Author
 
