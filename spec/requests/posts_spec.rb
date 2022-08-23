@@ -1,17 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'GET /index' do
-    it 'returns http success' do
-      get '/posts/index'
+  describe 'Posts' do
+    it 'Should returns http success, and view content' do
+      get '/user/:id/post'
       expect(response).to have_http_status(:success)
-    end
-  end
+      expect(response.body).to include('Many posts')
+      expect(response).to render_template(:posts)
+    end  
 
-  describe 'GET /show' do
-    it 'returns http success' do
-      get '/posts/show'
+    it 'Should return http success, and view content' do 
+      get '/user/:id/post/:id'
       expect(response).to have_http_status(:success)
-    end
+      expect(response.body).to include('Single post')
+      expect(response).to render_template(:post)
+    end  
+
   end
 end
