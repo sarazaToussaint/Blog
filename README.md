@@ -30,6 +30,8 @@ To test this app run `rspec`
 
 ## Author
 
+👤 **Toussaint Saraza**
+
 - GitHub: [@githubhandle](https://github.com/sarazaToussaint)
 - Twitter: [@twitterhandle](https://twitter.com/ToussaintSaraz1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/toussaintsaraza/)
