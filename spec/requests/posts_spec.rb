@@ -1,20 +1,37 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'Posts' do
-    it 'Should returns http success, and view content' do
-      get '/user/:id/post'
+  describe 'GET /index' do
+    it 'returns http success' do
+      get '/posts/index'
       expect(response).to have_http_status(:success)
+    end
+
+    it 'renders index template' do
+      get '/posts/index'
+      expect(response).to render_template(:index)
+    end
+
+    it 'response body includes correct placeholder text' do
+      get '/posts/index'
       expect(response.body).to include('Many posts')
-      expect(response).to render_template(:posts)
-    end  
+    end
+  end
 
-    it 'Should return http success, and view content' do 
-      get '/user/:id/post/:id'
+  describe 'GET /show' do
+    it 'returns http success' do
+      get '/posts/show'
       expect(response).to have_http_status(:success)
-      expect(response.body).to include('Single post')
-      expect(response).to render_template(:post)
-    end  
+    end
 
+    it 'renders show template' do
+      get '/posts/show'
+      expect(response).to render_template(:show)
+    end
+
+    it 'response body includes correct placeholder text' do
+      get '/posts/show'
+      expect(response.body).to include('Single post')
+    end
   end
 end
