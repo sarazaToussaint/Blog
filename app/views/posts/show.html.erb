@@ -1,3 +1,13 @@
-<h1>Single post</h1>
-
-<p>This page will show a single post</p>
+<article class="post-snipet">
+    <h3><%= @post.Title %>  by <%= @post.author.Name %></h3>
+    <div class="post-stats">
+      <span>Comments <%= @post.CommentsCounter %> &nbsp;,&nbsp;</span>
+      <span>Likes <%= @post.LikesCounter %></span>
+    </div>
+    <p><%= @post.Text %></p>
+  </article>
+  <ul class="comments">
+    <% @post.recent_comment.each do |comment| %>
+      <li><%= comment.author.Name %>: <%= comment.Text %>
+    <% end %>
+  </ul>

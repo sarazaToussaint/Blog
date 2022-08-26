@@ -1,3 +1,9 @@
-<h1>Single User</h1>
-
-<p>This page will show a single User</p>
+<%= render partial: 'partials/user', locals: { user: @user }%>
+<div class='bio'>
+  <b>Bio</b>
+  <p><%= @user.Bio %></p>
+</div>
+<% @recent_post.each do |post| %>
+  <%= render partial: 'partials/post', locals: { post: post} %>
+<% end %>
+<%= link_to("see all posts", user_posts_path(@user), class: "see-all-btn") %>
