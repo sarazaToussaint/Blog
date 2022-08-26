@@ -1,10 +1,9 @@
-<%= stylesheet_link_tag('user') %>
-<section class="user">
-  <%= image_tag('user.png', class: 'user_picture') %>
-  <div class="content">
-    <h2><%= link_to(user.Name, user_path(user)) %></h2>
-    <p>
-      Number of posts: <%= user.PostsCounter %>
-    </p>
-   </div> 
-</section>
+<div class='user-info'>
+  <div class='image-container'>
+    <img src= <%= user.Photo %> alt= '<%= user.Name + ' avatar'%>'/>
+  </div>
+  <div class='user-content'>
+    <h2><%= user.Name %></h2>
+    <p>Number of posts: <%= user.posts.count%></p>
+  </div>
+</div>

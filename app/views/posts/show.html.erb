@@ -1,13 +1,20 @@
-<article class="post-snipet">
-    <h3><%= @post.Title %>  by <%= @post.author.Name %></h3>
-    <div class="post-stats">
-      <span>Comments <%= @post.CommentsCounter %> &nbsp;,&nbsp;</span>
-      <span>Likes <%= @post.LikesCounter %></span>
+<div class='post-details'>
+  <div class='post user-post'>
+    <div class='post-header'>
+      <p class='title'><%= @post.Title %> by <%= @post.user.Name%></p>
+      <p class='post-statics'>Comments: <span><%= @post.comments.count %></span>, Likes: <span><%= @post.likes.count %></span></p>
     </div>
-    <p><%= @post.Text %></p>
-  </article>
-  <ul class="comments">
-    <% @post.recent_comment.each do |comment| %>
-      <li><%= comment.author.Name %>: <%= comment.Text %>
+    <div class='post-content'>
+      <%= @post.Text %>
+    </div>
+  </div>
+  <div class='comments_container user-post'>
+    <% if @post.comments.length > 0 %>
+      <% @post.comments.each do |comment| %>
+        <p class='comment'><%= comment.user.Name %> : <%= comment.Text %></p>
+      <% end %>
+    <% else %>
+      <p class='comment'>There are no comments <em>yet!!</em></p>
     <% end %>
-  </ul>
+  </div>
+</div>
