@@ -1,3 +1,5 @@
-<h1>Miltiple Users</h1>
-
-<p>This page will show Miltiple users</p>
+<section class='users-list'>
+  <% @users.each do |user| %>
+    <%= render partial: 'portials/user', locals: {user: user} %>
+  <% end %>
+</section>
