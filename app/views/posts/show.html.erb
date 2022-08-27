@@ -6,6 +6,9 @@
     </div>
     <div class='post-content'>
       <%= @post.Text %>
+       <%= form_with model: Like, url: post_likes_path(@post.user, @post), method: :post do |form| %>
+        <% form.submit "Like", class:"like-btn" %>
+      <% end %>
     </div>
   </div>
   <div class='comments_container user-post'>
@@ -16,5 +19,9 @@
     <% else %>
       <p class='comment'>There are no comments <em>yet!!</em></p>
     <% end %>
+  </div>
+    <div class='new-comment-container'>
+    <h3>Add a comment</h3>
+    <%= render partial: 'portials/new'%>
   </div>
 </div>
