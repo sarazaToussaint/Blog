@@ -18,4 +18,3 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:Text)
   end
 end
-  

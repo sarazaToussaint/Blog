@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:authorId])
     @posts = @user.posts
   end
 
@@ -34,19 +34,3 @@ class PostsController < ApplicationController
     params.require(:post).permit(:Title, :Text)
   end
 end
-  
-#   def create
-#     @post = Post.new(post_params)
-#     if @post.save
-#       redirect_to user_post_path(id: @post.id, user_id: @post.authorId), notice: 'Post was created successfully.'
-#     else
-#       render :new, alert: 'Error occured, Post not saved.'  
-#   end  
-
-#   private
-
-#   def post_params
-#     params.require(:post).permit( :Title, :Text, :authorId) 
-#   end  
-# end
-# end

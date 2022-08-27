@@ -1,22 +1,14 @@
-<%= form_for @post, url: user_posts_path do |f| %>
-<h2>Create new post article</h2>
-  <% if @post.errors.any? %>
-    <ul class="errors">
-      <% @post.errors.full_messages.each do |message| %>
-        <li>
-          <%= message %>
-        </li>
-      <% end %>
-    </ul>
+<section class='form-container'>
+  <h1>Create a Post </h1>
+  <%= form_with model: Post, method: :post do |form| %>
+    <div class="post-tilte"> 
+      <%= form.label :title, class:'label' %><br />
+      <%= form.text_field :Title, placeholder: 'Write your post title ...', class:"title-input" %>
+    </div>
+    <div class='post-text'>
+      <%= form.label :text, "Post", class:'label' %><br />
+      <%= form.text_area :Text, placeholder: 'Write your post here...', class:"text-input" %>
+    </div>
+    <%= form.submit "New Post", class:"submit-btn" %>
   <% end %>
-  <%= f.hidden_field :authorId, value: @params ? @params['user_id'] : '' %>
-  <div>
-    <%= f.label :Title %><br />
-    <%= f.text_field :Title, placeholder: 'Article title' %>
-  </div>
-  <div>
-    <%= f.label :Text, "Description" %><br />
-    <%= f.text_area :Text, placeholder: 'Type your article message in here...' %>
-  </div>
-  <%= f.submit "Submit post", disable_with: 'Submiting...' %>
-<% end %> 
+</section>
