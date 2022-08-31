@@ -2,36 +2,31 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    it 'returns reponse status  of http success/ok' do
-      get users_index_path
-      expect(response).to have_http_status(:ok)
+    before(:each) do
+      get users_path
     end
 
-    it 'renders index template' do
-      get users_index_path
+    it 'Check if response status was correct' do
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'Check if a correct template was rendered' do
       expect(response).to render_template(:index)
-    end
-
-    it 'response body includes correct placeholder text' do
-      get users_index_path
-      expect(response.body).to include('This page will show Miltiple users')
     end
   end
 
   describe 'GET /show' do
-    it 'returns http success' do
-      get users_show_path
-      expect(response).to have_http_status(:ok)
+    before(:each) do
+      @user = User.create(Name: 'Integration test', Photo: 'http://twitter.com', Bio: 'test for User')
+      get user_path(@user)
     end
 
-    it 'renders index template' do
-      get users_show_path
+    it 'Check if response status was correct' do
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'Check if a correct template was rendered' do
       expect(response).to render_template(:show)
-    end
-
-    it 'response body includes correct placeholder text' do
-      get users_show_path
-      expect(response.body).to include('Single User')
     end
   end
 end

@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
 
   describe 'Tests for User model validations' do
     it 'is not valid' do
-      expect(user).to_not be_valid
+      expect(user).to be_valid
     end
 
     it 'is valid ' do

@@ -1,5 +1,5 @@
 <div class='user-post'>
-  <h4 class='post-title'><%= post.Title%> </h4>
+  <h4 class='post-title'><%= link_to(post.Title, user_post_path(@user, post), class: "user-name") %>  </h4>
   <p class='post-text'>
     <% if post.Text.length > 110 %>
       <%= truncate(post.Text, length: 110) ... %>
