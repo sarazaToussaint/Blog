@@ -11,7 +11,7 @@
       <% end %>
 
       <% if can? :destroy, @post %>
-       <%= button_to "Delete Post", user_post_path(@post.user, @post), method: :delete, class: "btn btn-outline-danger btn-lg btn-block" %>
+       <%= button_to "Delete Post", user_post_path(@post.user, @post), method: :delete, class: "delete-btn" %>
      <% end %>
 
     </div>
@@ -21,6 +21,9 @@
     <% if @post.comments.length > 0 %>
       <% @post.comments.each do |comment| %>
         <p class='comment'><%= comment.user.Name %> : <%= comment.Text %></p>
+          <% if can? :destroy, comment %>
+           <%= button_to 'Delete', post_comment_path(comment.user, comment.post, comment), method: :delete, class: "delete-btn" %> 
+          <% end %>
       <% end %>
     <% else %>
       <p class='comment'>There are no comments <em>yet!!</em></p>
