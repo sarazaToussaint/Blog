@@ -250,3 +250,8 @@
   background-color: #413c3c;
   color: #fff;
 }
+
+.user-name {
+  text-decoration: none;
+  color: #000;
+}
