@@ -5,15 +5,14 @@ class Ability
 
   def initialize(user)
     
-    user ||= User.new #guest user (Not logged in)
-      can :read, :all
-        if user.admin?
-          can :manage, :all
-        else  
-          can :manage, Post, authorId: user.id
-          can :manage, Comment, authorId: user.id
-          can :read, :all
-        end
+    can :read, :all
+      if user.admin?
+        can :manage, :all
+      else
+        can :create, Comment  
+        can :manage, Post, authorId: user.id
+        can :manage, Comment, authorId: user.id
+      end
     
     #
     # The first argument to `can` is the action you are giving the user
