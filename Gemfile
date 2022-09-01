@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 ruby '3.1.2'
@@ -11,6 +12,8 @@ gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+gem 'childprocess'
+gem 'ffi'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 

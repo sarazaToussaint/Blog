@@ -28,13 +28,19 @@ Push the changes to changes to the repository (i.e git push)
 
 To test this app run `rspec`
 
-## Author
+## Authors
 
 👤 **Toussaint Saraza**
 
 - GitHub: [@githubhandle](https://github.com/sarazaToussaint)
 - Twitter: [@twitterhandle](https://twitter.com/ToussaintSaraz1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/toussaintsaraza/)
+
+👤 **Ibrahim Ahmat** 
+
+- GitHub: [@ibr5500](https://github.com/ibr5500) 
+- Twitter: [@ibr_ahmat](https://twitter.com/ibr_ahmat) 
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrahim-ahmat/) 
 
 ## 🤝 Contributing
 
