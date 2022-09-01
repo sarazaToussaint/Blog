@@ -9,8 +9,14 @@
        <%= form_with model: Like, url: post_likes_path(@post.user, @post), method: :post do |form| %>
         <% form.submit "Like", class:"like-btn" %>
       <% end %>
+
+      <% if can? :destroy, @post %>
+       <%= button_to "Delete Post", user_post_path(@post.user, @post), method: :delete, class: "btn btn-outline-danger btn-lg btn-block" %>
+     <% end %>
+
     </div>
   </div>
+
   <div class='comments_container user-post'>
     <% if @post.comments.length > 0 %>
       <% @post.comments.each do |comment| %>
