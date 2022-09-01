@@ -28,6 +28,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy @post = Post.includes(:user).find(params[:id]) 
+    @post.destroy! flash[:success] = 'You have deleted your Post!!.' 
+    redirect_to user_path(current_user) 
+  end 
+  
   private
 
   def post_params
