@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'devise'
+gem 'cancancan'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 ruby '3.1.2'
